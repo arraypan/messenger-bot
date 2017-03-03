@@ -13,7 +13,7 @@ def verify():
     # when the endpoint is registered as a webhook, it must echo back
     # the 'hub.challenge' value it receives in the query arguments
     if request.args.get("hub.mode") == "subscribe" and request.args.get("hub.challenge"):
-        if not request.args.get("hub.verify_token") == os.environ["VERIFY_TOKEN"]:
+        if not request.args.get("hub.verify_token") == os.environ["arpan_hello"]:
             return "Verification token mismatch", 403
         return request.args["hub.challenge"], 200
 
@@ -58,7 +58,7 @@ def send_message(recipient_id, message_text):
     log("sending message to {recipient}: {text}".format(recipient=recipient_id, text=message_text))
 
     params = {
-        "access_token": os.environ["hello_arpan_grizzhacks"]
+        "access_token": os.environ["EAAKYrMRozHABABH40yBqP3iea6p7vYmQcAi3KYZAzQsV75EKsQCDZAKtl1QXlhus58yF0ZAwv45yaZCdZCLAXTWKbkpYia9waspkZByNIYtsw1xIJwnV9lf5AwQbq95vgFjC8BZBv7mZBqFFLEOiB0JZCKdJcvVM5metim7V8jDZCRhQZDZD"]
     }
     headers = {
         "Content-Type": "application/json"
