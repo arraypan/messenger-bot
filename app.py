@@ -58,7 +58,7 @@ def send_message(recipient_id, message_text):
     log("sending message to {recipient}: {text}".format(recipient=recipient_id, text=message_text))
 
     params = {
-        "access_token": os.environ["EAAKYrMRozHABABH40yBqP3iea6p7vYmQcAi3KYZAzQsV75EKsQCDZAKtl1QXlhus58yF0ZAwv45yaZCdZCLAXTWKbkpYia9waspkZByNIYtsw1xIJwnV9lf5AwQbq95vgFjC8BZBv7mZBqFFLEOiB0JZCKdJcvVM5metim7V8jDZCRhQZDZD"]
+        "access_token": os.environ["hello_arpan_grizzhacks"]
     }
     headers = {
         "Content-Type": "application/json"
